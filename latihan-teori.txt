@@ -5,55 +5,102 @@ QUESTIONS:
 A. BASIC REACT
 
 1. Apa itu React.js, dan React Native?
+    React.js adalah library atau framework front-end Javascript untuk membangun user interface aplikasi web berbasis komponen dan virtual DOM.
+    React Native adalah library atau framework front-end Javascript untuk membangun user interface mobile cross-platform berbasis native komponen.
 
 2. Apa itu JSX?
+    JSX merupakan singkatan dari JavaScript Syntax Extension atau dikenal juga dengan Javascript XML. JSX adalah ekstensi React untuk Javasript. Sintaks JSX mirip seperti HTML
 
 3. Apa itu Real DOM dan Virtual DOM?
+    DOM adalah singkatan dari Document Object Model. DOM JavaScript adalah interface yang memungkinkan developer memanipulasi halaman web dari segi struktur, tampilan, dan kontennya. Setiap adanya perubahan pada state diaplikasi kita , DOM akan diupdate untuk menggambarkan perubahan tersebut.
+    Virtual DOM secara singkat nya adalah sebuah javascript object (virtual) yang merepresentasikan DOM yang sebenarnya (real DOM). Virtual DOM ini memiliki konsep yaitu setiap saat perubahan terjadi di state pada aplikasi kita maka akan membuat virtual dom yang baru. Hanya perubahan tersebut yang akan dikirim ke real dom untuk mengupdate nya. Proses seperti ini membuat virtual DOM lebih cepat dibandingkan dengan Real OM
 
-4. Apa bedanya Functional Component dan Class Component 
+4. Apa bedanya Functional Component dan Class Component ?
+    Functional component hanya bisa menggunakan props itu sebabnya function component disebut stateless component atau biasa digunakan juga sebagai UI Component (komponen yang menangani tampilan).React Function Component adalah jenis React component yang memiliki syntax yang lebih simple dan memungkinkan kita untuk menggunakan React Hooks.
+    Sedangkan Class component mengahruskan penggunaan props & state untuk menghandle data di dalam component, tetapi memungkinkan menggunakan lifecycle methods.
 
 5. Apa itu React Lifecycle?
+    Component — component di react js akan melewati tiga fase hidup, yaitu :
+    1) Mounting
+    2) Updating
+    3) Unmounting
+    Pada setiap fase, components akan mengeksekusi fungsi atau method yang berbeda-beda.
+    Fungsi — fungsi ini yang kemudian di sebut sebagai lifecycle methods.
 
 --------------------------------------------------------------------------------------
 B. EVENT HANDLING
 
-1. Sebutkan Event Handling yang kamu ketahui?
+1. Sebutkan Event Handling yang kamu ketahui ?
+    1) onClick
+    2) onChange
+    3) onSelect
+    4) onKeyPress
+    5) onFocus
 
 2. Apa fungsi onClick dan onChange?
+    onClick mentrigger function saat element tersebut di click
+    onChanege mentrigger function saat element tersebut tejadi perubahan
 
 3. Mengapa dalam onClick dan onChange terdapat fungsi Callback
+    karena onClick dan onChange menerima parameter function, sehingga function tersebut hnya dijalankan saat trigger tersebut terjadi
+
 
 --------------------------------------------------------------------------------------
 C. REACT HOOKS
 
 1. Apa itu React Hooks
+    React Hooks adalah fitur pada ReactJS yang memungkinkan developer menggunakan state dan fitur React lainnya pada komponen fungsional.
 
-2. Apa bedanya REact Hooks dengan React Lifecycle
+2. Apa bedanya React Hooks dengan React Lifecycle
+    React hooks digunakan ketika komponen React menggunakan functional component.
+    Sedangkan React lifecycle digunakan ketika komponen React menggunakan class component.
 
 3. Sebutkan React Hooks yang kamu ketahui min 5?
+    useState()  
+    useEffect()
+    useContext()
+    useReducer()
+    useMemo()
+    useCallback()
+    useImperativeHandle()
+    useDebugValue()
+    useRef()
+    useLayoutEffect()
 
-45. Mengapa harus menggunakan useState di banding variable biasa?.
+4. Mengapa harus menggunakan useState di banding variable biasa ?
+    Alasannya adalah jika menggunkan useState akan merender ulang tampilannya. Sedangkan Variabel  hanya mengubah di memori dan status aplikasi tidak sinkron dengan tampilan.
 
 5. Apa fungsi useEffect dan apa yang dimaksud Array Dependencies?
+    Fungsi dari useEffect adalah menjalankan fungsi setiap kali merender komponen.
+    Dan Array Dependencies digunakan saat ingin useEffect hanya dijalankan sekali saat pertama kali merender komponen atau saat trigger terjadi di array tersebut dan tidak merender seacra berulang.
 
 --------------------------------------------------------------------------------------
 D. REACT ROUTER DOM
 
 1. Apa itu React Router DOM?
+    React Router adalah sebuah library yang digunakan dalam aplikasi React untuk membuat routing dan navigasi antar halaman. Library ini memungkinkan untuk membuat navigasi pada aplikasi web menjadi cepat dan SPA atau Single Page Application.
 
-2. Sebutkan React Router DOm yang kamu ketahui?
+2. Sebutkan React Router DOM yang kamu ketahui?
+    HashRouter dan BrowserRouter
 
 3. Apa fungsi <BrowserRouter/>
+    <BrowserRouter/> berfungsi untuk wrapping komponent agar memecah kedalam beberapa routes yang seperti ada di multi-page web, walaupun masih berbentuk single-page web.
 
-4. Apa fungsi useParams Apa fungsi useNavigate?
+4. Apa fungsi useParams ? Apa fungsi useNavigate?
+    useParams digunakan untuk mengambil data dari variable URL yang sudah di tentukan, contoh /:id
+    useNavigate digunakan untuk melakukan navigasi antar pages
 
-5 Versi berapakah React Router yang kita gunakan?
+5. Versi berapakah React Router yang kita gunakan?
+    v6
 
 --------------------------------------------------------------------------------------
 E. Designing CSS
 
 1. Apa itu CSS in JS?
+    CSS adalah bahasa Cascading Style Sheet dan biasanya digunakan untuk mengatur tampilan elemen yang tertulis dalam bahasa markup, seperti HTML. CSS berfungsi untuk memisahkan konten dari tampilan visualnya di situs.
 
 2. Apa itu Styled Component
+    Styled components adalah salah satu CSS-in-JS library yang dapat digunakan di React. Dengan styled components, sesuai dengan namanya, kita dapat membuat suatu component dengan sekaligus mengatur style didalamnya, sehingga nantinya style telah melekat pada component yang kita buat.
 
 3. Apa itu SASS/SCSS ?
+    SCSS (Sassy CSS) adalah sintaks terbaru dari SASS (Syntactically Awesome StyleSheets). SASS sendiri merupakan preprocessor CSS untuk mengolah data menggunakan sintaks dengan output CSS. Teknik SCSS mampu memaksimalkan pengembangan tampilan website.
